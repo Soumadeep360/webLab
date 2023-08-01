@@ -1,0 +1,63 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email</title>
+
+
+    <script>
+        function validate(){
+            var email=document.getElementsById("text").value;
+            var regex=/^([a-zA-z0-9\._]+)@([a-zA-z0-9])+(.[a-z]+)?$/
+
+            if(regex.text(email)){
+                alert("valid")
+                return true;
+            }
+            else
+            {
+                alert("not valid")
+                return false;
+            }
+        }
+    </script>
+    </head>
+<body>
+    <form>
+        <input id="text" placeholder="email" type="text"><br><br>
+        <button type="button">submit</button>
+    </form>
+</body>
+</html> -->
+
+<html>
+<body>
+<script>  
+function validateemail()  
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+}  
+</script>  
+<body>  
+<form name="myform"  method="post" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validateemail();"> 
+<table align="center">
+<br><br><br><br>
+<h2 align="center">Email Validation</h2>
+<br>
+<tr> 
+
+<td align="right">Email:</td>
+<td align="left"><input type="text" maxlength="50" size="30"name="email"></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" value="Submit" onClick="validateemail()"/></td>
+</tr>
+</table> </form> </body> </html>
